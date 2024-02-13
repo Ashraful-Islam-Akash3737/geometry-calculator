@@ -31,7 +31,10 @@ function handleTriangleArea() {
     let height = input('triangle-height');
 
     if (isNaN(base) || isNaN(height)) {
-        return ('please, provide a valid number.')
+        alert('please, provide a valid number.');
+        document.getElementById('triangle-base').value = '';
+        document.getElementById('triangle-height').value = '';
+        return;
 
     }
 
@@ -39,8 +42,8 @@ function handleTriangleArea() {
     const area = 0.5 * base * height;
     displayArea('triangle-area', area);
     handleCalculation('calculation-container', "Triangle area is: ", area);
-    document.getElementById('triangle-base').value =  '';
-    document.getElementById('triangle-height').value =  '';
+    document.getElementById('triangle-base').value = '';
+    document.getElementById('triangle-height').value = '';
 
 }
 // rectangle area
@@ -48,24 +51,40 @@ function handleRectangleArea() {
     const width = input('rectangle-width');
     const length = input('rectangle-length');
 
+    if (isNaN(width) || isNaN(length)) {
+        alert('please, provide a valid number.');
+        document.getElementById('rectangle-width').value = '';
+        document.getElementById('rectangle-length').value = '';
+        return;
+
+    }
+
     const area = width * length;
     displayArea('rectangle-area', area);
     handleCalculation('calculation-container', "Rectangle area is: ", area);
 
-    document.getElementById('rectangle-width').value =  '';
-    document.getElementById('rectangle-length').value =  '';
+    document.getElementById('rectangle-width').value = '';
+    document.getElementById('rectangle-length').value = '';
 }
 // parallelogram area
 function handleParallelogramArea() {
     const base = input('parallelogram-base');
     const height = input('parallelogram-height');
 
+    if (isNaN(base) || isNaN(height)) {
+        alert('please, provide a valid number.');
+        document.getElementById('parallelogram-base').value = '';
+        document.getElementById('parallelogram-height').value = '';
+        return;
+
+    }
+
     const area = base * height;
     displayArea('parallelogram-area', area);
     handleCalculation('calculation-container', "Parallelogram area is: ", area);
 
-    document.getElementById('parallelogram-base').value =  '';
-    document.getElementById('parallelogram-height').value =  '';
+    document.getElementById('parallelogram-base').value = '';
+    document.getElementById('parallelogram-height').value = '';
 }
 
 // rhombus area
@@ -73,12 +92,20 @@ function handleRhombusArea() {
     const d1 = input('rhombus-d1');
     const d2 = input('rhombus-d2');
 
+    if (isNaN(d1) || isNaN(d2)) {
+        alert('please, provide a valid number.');
+        document.getElementById('rhombus-d1').value = '';
+        document.getElementById('rhombus-d2').value = '';
+        return;
+
+    }
+
     const area = 0.5 * d1 * d2;
     displayArea('rhombus-area', area);
     handleCalculation('calculation-container', "Rhombus area is: ", area);
 
-    document.getElementById('rhombus-d1').value =  '';
-    document.getElementById('rhombus-d2').value =  '';
+    document.getElementById('rhombus-d1').value = '';
+    document.getElementById('rhombus-d2').value = '';
 
 }
 // pentagon area
@@ -86,23 +113,39 @@ function handlePentagonArea() {
     const p = input('pentagon-p');
     const b = input('pentagon-b');
 
+    if (isNaN(p) || isNaN(b)) {
+        alert('please, provide a valid number.');
+        document.getElementById('pentagon-p').value = '';
+        document.getElementById('pentagon-b').value = '';
+        return;
+
+    }
+
     const area = 0.5 * p * b;
     displayArea('pentagon-area', area);
     handleCalculation('calculation-container', "Pentagon area is: ", area);
 
-    document.getElementById('pentagon-p').value =  '';
-    document.getElementById('pentagon-b').value =  '';
+    document.getElementById('pentagon-p').value = '';
+    document.getElementById('pentagon-b').value = '';
 }
 // ellipse area
 function handleEllipseArea() {
     const a = input('ellipse-a');
     const b = input('ellipse-b');
 
+    if (isNaN(a) || isNaN(b)) {
+        alert('please, provide a valid number.');
+        document.getElementById('ellipse-a').value = '';
+        document.getElementById('ellipse-b').value = '';
+        return;
+
+    }
+
     const area = 3.1416 * a * b;
     displayArea('ellipse-area', area);
     handleCalculation('calculation-container', "Ellipse area is: ", area);
 
-    document.getElementById('ellipse-a').value =  '';
-    document.getElementById('ellipse-b').value =  '';
+    document.getElementById('ellipse-a').value = '';
+    document.getElementById('ellipse-b').value = '';
 
 }
